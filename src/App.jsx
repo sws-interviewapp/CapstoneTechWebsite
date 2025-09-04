@@ -174,11 +174,11 @@ function App() {
                   Community & Career Centric AI
                 </Badge>
                 <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold leading-tight">
-                  AI That Strengthens Communities While Advancing Careers
+                  Community-Centric AI That Empowers Everyone
                 </h1>
                 <p className="text-lg md:text-xl text-blue-100 leading-relaxed max-w-lg">
-                  Pioneering technology that serves both individual growth and community empowerment. 
-                  Experience AI that's built for everyone, accessible to all, and driven by authentic understanding.
+                  Built by someone who understands second chances. AI that strengthens communities 
+                  while advancing individual careers.
                 </p>
               </div>
               
@@ -336,23 +336,22 @@ function App() {
               
               <div className="space-y-6 text-gray-600 leading-relaxed">
                 <p>
-                  At 22, Shawn Gregoire was homeless. Not by choice, but by circumstance, one of those 
-                  moments when life strips away everything you thought you could count on. Most people 
-                  in that situation focus on survival. Shawn focused on transformation.
+                  At 22, Shawn Gregoire was homeless. That experience taught him something that can't 
+                  be taught in business school: the weight of a second chance, the power of someone 
+                  believing in your potential when the world has written you off.
                 </p>
                 
                 <p>
-                  "When you've been at the bottom," Shawn reflects, "you understand something that can't 
-                  be taught in business school or coded into an algorithm: the weight of a second chance, 
-                  the power of someone believing in your potential when the world has written you off."
+                  "When you've been at the bottom," Shawn reflects, "you understand that technology 
+                  should strengthen communities while advancing individual careers. That's not just 
+                  good business—it's the right thing to do."
                 </p>
                 
                 <p>
-                  Fourteen and a half years in the Air Force taught systems thinking. A Master's in 
-                  Education Leadership revealed how adults learn and grow. An Executive MBA from Brown/IE 
-                  (Top 5 globally) provided business acumen. But it was the combination, understanding 
-                  both individual development and organizational systems, that sparked the vision for 
-                  Community & Career Centric AI.
+                  Fourteen and a half years in the Air Force, a Master's in Education Leadership, 
+                  and an Executive MBA from Brown/IE (Top 5 globally) provided the foundation. 
+                  But it was understanding both individual development and community systems that 
+                  sparked the vision for Community-Centric AI.
                 </p>
               </div>
 
@@ -371,9 +370,8 @@ function App() {
             <div className="space-y-6">
               <Card className="p-6 border-l-4 border-capstone-blue">
                 <blockquote className="text-lg italic text-gray-700">
-                  "I realized that most AI companies are building for efficiency or profit. 
-                  But what if we built AI that strengthens communities while advancing individual careers? 
-                  What if technology could be both economically viable and socially transformative?"
+                  "What if we built AI that strengthens communities while advancing individual careers? 
+                  Technology that's both economically viable and socially transformative."
                 </blockquote>
                 <cite className="text-sm text-gray-500 mt-4 block">Shawn Gregoire, Founder & CEO</cite>
               </Card>
@@ -384,13 +382,13 @@ function App() {
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-capstone-green mt-1" />
                     <div>
-                      <strong>Traditional AI asks:</strong> "How can we automate this process?"
+                      <strong>Traditional AI:</strong> "How can we automate this process?"
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-capstone-blue mt-1" />
                     <div>
-                      <strong>Capstone AI asks:</strong> "How can we empower this person while strengthening this community?"
+                      <strong>Community-Centric AI:</strong> "How can we empower this person while strengthening this community?"
                     </div>
                   </div>
                 </div>
