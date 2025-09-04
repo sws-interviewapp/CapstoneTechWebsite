@@ -166,17 +166,17 @@ function App() {
 
       {/* Hero Section */}
       <section id="home" data-testid="hero-section" data-component="hero" data-section="home" className="hero-section text-white section-padding pt-24">
-        <div className="container-custom">
+        <div className="container-custom pt-52">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
-              <div className="space-y-4">
-                <Badge className="bg-capstone-gold text-black font-semibold">
+              <div className="space-y-6">
+                <Badge className="bg-capstone-gold text-black font-semibold px-3 py-1 text-sm">
                   Community & Career Centric AI
                 </Badge>
-                <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+                <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold leading-tight">
                   AI That Strengthens Communities While Advancing Careers
                 </h1>
-                <p className="text-xl text-blue-100 leading-relaxed">
+                <p className="text-lg md:text-xl text-blue-100 leading-relaxed max-w-lg">
                   Pioneering technology that serves both individual growth and community empowerment. 
                   Experience AI that's built for everyone, accessible to all, and driven by authentic understanding.
                 </p>
@@ -188,7 +188,7 @@ function App() {
                   data-component="hero-cta"
                   data-action="explore-services"
                   onClick={() => scrollToSection('services')}
-                  className="bg-white text-capstone-blue hover:bg-gray-100 px-8 py-3 text-lg font-semibold"
+                  className="bg-white text-capstone-blue hover:bg-gray-100 px-8 py-3 text-base md:text-lg font-semibold"
                 >
                   Explore Our Solutions
                   <ArrowRight className="ml-2 w-5 h-5" />
@@ -198,59 +198,59 @@ function App() {
                   data-component="hero-secondary-cta"
                   data-action="view-story"
                   onClick={() => scrollToSection('story')}
-                  className="btn-secondary border-white text-white hover:bg-white hover:text-capstone-blue px-8 py-3 text-lg font-semibold"
+                  className=" border-white border-1 text-white hover:bg-white hover:text-black bg-transparent px-8 py-3 text-sm md:text-base font-semibold"
                 >
                   Our Story
                 </Button>
               </div>
 
               {/* Stats */}
-              <div data-testid="hero-stats" data-component="stats-grid" className="grid grid-cols-3 gap-8 pt-8">
+              <div data-testid="hero-stats" data-component="stats-grid" className="grid grid-cols-3 gap-6 pt-8">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-capstone-gold">98%</div>
-                  <div className="text-sm text-blue-100">Success Rate</div>
+                  <div className="text-2xl md:text-3xl font-bold text-capstone-gold">98%</div>
+                  <div className="text-xs md:text-sm text-blue-100">Success Rate</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-capstone-gold">5K+</div>
-                  <div className="text-sm text-blue-100">Lives Impacted</div>
+                  <div className="text-2xl md:text-3xl font-bold text-capstone-gold">5K+</div>
+                  <div className="text-xs md:text-sm text-blue-100">Lives Impacted</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-capstone-gold">24/7</div>
-                  <div className="text-sm text-blue-100">AI Support</div>
+                  <div className="text-2xl md:text-3xl font-bold text-capstone-gold">24/7</div>
+                  <div className="text-xs md:text-sm text-blue-100">AI Support</div>
                 </div>
               </div>
             </div>
 
-            <div className="relative">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-                <div className="space-y-6">
+            <div className="relative flex justify-center lg:justify-end">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 max-w-md w-full">
+                <div className="space-y-5">
                   <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 bg-capstone-gold rounded-full flex items-center justify-center">
-                      <Brain className="w-6 h-6 text-black" />
+                    <div className="w-10 h-10 md:w-12 md:h-12 bg-capstone-gold rounded-full flex items-center justify-center flex-shrink-0">
+                      <Brain className="w-5 h-5 md:w-6 md:h-6 text-black" />
                     </div>
                     <div>
-                      <h3 className="font-semibold">AI Interview Coach</h3>
-                      <p className="text-sm text-blue-100">Practice with confidence</p>
+                      <h3 className="font-semibold text-sm md:text-base">AI Interview Coach</h3>
+                      <p className="text-xs md:text-sm text-blue-100">Practice with confidence</p>
                     </div>
                   </div>
                   
                   <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 bg-capstone-gold rounded-full flex items-center justify-center">
-                      <MessageSquare className="w-6 h-6 text-black" />
+                    <div className="w-10 h-10 md:w-12 md:h-12 bg-capstone-gold rounded-full flex items-center justify-center flex-shrink-0">
+                      <MessageSquare className="w-5 h-5 md:w-6 md:h-6 text-black" />
                     </div>
                     <div>
-                      <h3 className="font-semibold">Communication Training</h3>
-                      <p className="text-sm text-blue-100">Mobile-first coaching</p>
+                      <h3 className="font-semibold text-sm md:text-base">Communication Training</h3>
+                      <p className="text-xs md:text-sm text-blue-100">Mobile-first coaching</p>
                     </div>
                   </div>
                   
                   <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 bg-capstone-gold rounded-full flex items-center justify-center">
-                      <Settings className="w-6 h-6 text-black" />
+                    <div className="w-10 h-10 md:w-12 md:h-12 bg-capstone-gold rounded-full flex items-center justify-center flex-shrink-0">
+                      <Settings className="w-5 h-5 md:w-6 md:h-6 text-black" />
                     </div>
                     <div>
-                      <h3 className="font-semibold">Custom AI Solutions</h3>
-                      <p className="text-sm text-blue-100">Tailored for your mission</p>
+                      <h3 className="font-semibold text-sm md:text-base">Custom AI Solutions</h3>
+                      <p className="text-xs md:text-sm text-blue-100">Tailored for your mission</p>
                     </div>
                   </div>
                 </div>
