@@ -64,11 +64,11 @@ function App() {
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-border z-50">
+      <nav data-testid="main-navigation" data-component="navigation" className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-border z-50">
         <div className="container-custom">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <div className="flex items-center space-x-2">
+            <div data-testid="logo" data-component="logo" className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-capstone-blue rounded-full flex items-center justify-center">
                 <Rocket className="w-5 h-5 text-white" />
               </div>
@@ -76,7 +76,7 @@ function App() {
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
+            <div data-testid="desktop-navigation" data-component="desktop-nav" className="hidden md:flex items-center space-x-8">
               {[
                 { id: 'home', label: 'Home' },
                 { id: 'about', label: 'About' },
@@ -88,6 +88,9 @@ function App() {
               ].map((item) => (
                 <button
                   key={item.id}
+                  data-testid={`nav-${item.id}`}
+                  data-component="nav-link"
+                  data-section={item.id}
                   onClick={() => scrollToSection(item.id)}
                   className={`text-sm font-medium transition-colors hover:text-capstone-blue ${
                     activeSection === item.id ? 'text-capstone-blue' : 'text-gray-600'
@@ -99,8 +102,11 @@ function App() {
             </div>
 
             {/* CTA Button */}
-            <div className="hidden md:block">
+            <div data-testid="cta-button-container" data-component="cta-container" className="hidden md:block">
               <Button 
+                data-testid="cta-button"
+                data-component="cta-button"
+                data-action="contact"
                 onClick={() => scrollToSection('contact')}
                 className="btn-primary"
               >
@@ -110,6 +116,8 @@ function App() {
 
             {/* Mobile Menu Button */}
             <button
+              data-testid="mobile-menu-button"
+              data-component="mobile-menu-toggle"
               className="md:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
@@ -119,7 +127,7 @@ function App() {
 
           {/* Mobile Menu */}
           {isMenuOpen && (
-            <div className="md:hidden py-4 border-t border-border">
+            <div data-testid="mobile-menu" data-component="mobile-menu" className="md:hidden py-4 border-t border-border">
               <div className="flex flex-col space-y-4">
                 {[
                   { id: 'home', label: 'Home' },
@@ -132,6 +140,9 @@ function App() {
                 ].map((item) => (
                   <button
                     key={item.id}
+                    data-testid={`mobile-nav-${item.id}`}
+                    data-component="mobile-nav-link"
+                    data-section={item.id}
                     onClick={() => scrollToSection(item.id)}
                     className="text-left text-sm font-medium text-gray-600 hover:text-capstone-blue"
                   >
@@ -139,6 +150,9 @@ function App() {
                   </button>
                 ))}
                 <Button 
+                  data-testid="mobile-cta-button"
+                  data-component="mobile-cta-button"
+                  data-action="contact"
                   onClick={() => scrollToSection('contact')}
                   className="btn-primary w-full mt-4"
                 >
@@ -151,7 +165,7 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="hero-section text-white section-padding pt-24">
+      <section id="home" data-testid="hero-section" data-component="hero" data-section="home" className="hero-section text-white section-padding pt-24">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
@@ -170,6 +184,9 @@ function App() {
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
+                  data-testid="hero-explore-button"
+                  data-component="hero-cta"
+                  data-action="explore-services"
                   onClick={() => scrollToSection('services')}
                   className="bg-white text-capstone-blue hover:bg-gray-100 px-8 py-3 text-lg font-semibold"
                 >
@@ -177,6 +194,9 @@ function App() {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
                 <Button 
+                  data-testid="hero-story-button"
+                  data-component="hero-secondary-cta"
+                  data-action="view-story"
                   onClick={() => scrollToSection('story')}
                   className="btn-secondary border-white text-white hover:bg-white hover:text-capstone-blue px-8 py-3 text-lg font-semibold"
                 >
@@ -185,7 +205,7 @@ function App() {
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-8 pt-8">
+              <div data-testid="hero-stats" data-component="stats-grid" className="grid grid-cols-3 gap-8 pt-8">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-capstone-gold">98%</div>
                   <div className="text-sm text-blue-100">Success Rate</div>
@@ -241,14 +261,14 @@ function App() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="section-padding bg-gray-50">
+      <section id="about" data-testid="about-section" data-component="about" data-section="about" className="section-padding bg-gray-50">
         <div className="container-custom">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
               What Makes Us Different
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We don't just build AI—we build AI that serves humanity's highest aspirations, 
+              We don't just build AI, we build AI that serves humanity's highest aspirations, 
               where technology strengthens communities while advancing individual careers.
             </p>
           </div>
@@ -264,7 +284,7 @@ function App() {
               <CardContent>
                 <p className="text-gray-600">
                   Every algorithm reflects our values of equity, empowerment, and authentic human connection. 
-                  We're not a for-profit with a social mission tacked on—we're mission-driven by design.
+                  We're not a for-profit with a social mission tacked on, we're mission-driven by design.
                 </p>
               </CardContent>
             </Card>
@@ -279,7 +299,7 @@ function App() {
               <CardContent>
                 <p className="text-gray-600">
                   Built from the ground up for everyone, including those using assistive technology. 
-                  Accessibility isn't retrofitted—it's fundamental to how we design and develop.
+                  Accessibility isn't retrofitted, it's fundamental to how we design and develop.
                 </p>
               </CardContent>
             </Card>
@@ -303,7 +323,7 @@ function App() {
       </section>
 
       {/* Founder Story Section */}
-      <section id="story" className="section-padding">
+      <section id="story" data-testid="story-section" data-component="story" data-section="story" className="section-padding">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
@@ -316,7 +336,7 @@ function App() {
               
               <div className="space-y-6 text-gray-600 leading-relaxed">
                 <p>
-                  At 22, Shawn Gregoire was homeless. Not by choice, but by circumstance—one of those 
+                  At 22, Shawn Gregoire was homeless. Not by choice, but by circumstance, one of those 
                   moments when life strips away everything you thought you could count on. Most people 
                   in that situation focus on survival. Shawn focused on transformation.
                 </p>
@@ -330,8 +350,8 @@ function App() {
                 <p>
                   Fourteen and a half years in the Air Force taught systems thinking. A Master's in 
                   Education Leadership revealed how adults learn and grow. An Executive MBA from Brown/IE 
-                  (Top 5 globally) provided business acumen. But it was the combination—understanding 
-                  both individual development and organizational systems—that sparked the vision for 
+                  (Top 5 globally) provided business acumen. But it was the combination, understanding 
+                  both individual development and organizational systems, that sparked the vision for 
                   Community & Career Centric AI.
                 </p>
               </div>
@@ -355,7 +375,7 @@ function App() {
                   But what if we built AI that strengthens communities while advancing individual careers? 
                   What if technology could be both economically viable and socially transformative?"
                 </blockquote>
-                <cite className="text-sm text-gray-500 mt-4 block">— Shawn Gregoire, Founder & CEO</cite>
+                <cite className="text-sm text-gray-500 mt-4 block">Shawn Gregoire, Founder & CEO</cite>
               </Card>
 
               <div className="space-y-4">
@@ -381,7 +401,7 @@ function App() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="section-padding bg-gray-50">
+      <section id="services" data-testid="services-section" data-component="services" data-section="services" className="section-padding bg-gray-50">
         <div className="container-custom">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
@@ -549,14 +569,14 @@ function App() {
       </section>
 
       {/* Approach Section */}
-      <section id="approach" className="section-padding">
+      <section id="approach" data-testid="approach-section" data-component="approach" data-section="approach" className="section-padding">
         <div className="container-custom">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
               Our Approach
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Community & Career Centric AI isn't just a tagline—it's a methodology that guides every decision
+              Community & Career Centric AI isn't just a tagline, it's a methodology that guides every decision
             </p>
           </div>
 
@@ -567,7 +587,7 @@ function App() {
               </div>
               <h3 className="text-xl font-semibold">Community First</h3>
               <p className="text-gray-600">
-                We don't study underserved communities; we come from them. 
+                We don't study underserved communities, we come from them. 
                 Authentic understanding drives authentic solutions.
               </p>
             </div>
@@ -579,7 +599,7 @@ function App() {
               <h3 className="text-xl font-semibold">Accessibility Built-In</h3>
               <p className="text-gray-600">
                 Every feature designed from day one for screen readers, voice commands, 
-                and assistive technology. Not retrofitted—fundamental.
+                and assistive technology. Not retrofitted, fundamental.
               </p>
             </div>
 
@@ -609,14 +629,14 @@ function App() {
       </section>
 
       {/* Impact Section */}
-      <section id="impact" className="section-padding bg-gray-50">
+      <section id="impact" data-testid="impact-section" data-component="impact" data-section="impact" className="section-padding bg-gray-50">
         <div className="container-custom">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
               Real Impact, Real Results
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our solutions don't just work in theory—they deliver measurable results for real people and organizations
+              Our solutions don't just work in theory, they deliver measurable results for real people and organizations
             </p>
           </div>
 
@@ -650,7 +670,7 @@ function App() {
                     "The AI feedback helped me land my dream job at Google! The practice sessions 
                     gave me confidence I never had before."
                   </blockquote>
-                  <cite className="text-sm text-gray-500">— Sarah Chen, Software Engineer</cite>
+                  <cite className="text-sm text-gray-500">Sarah Chen, Software Engineer</cite>
                 </div>
               </div>
             </Card>
@@ -665,7 +685,7 @@ function App() {
                     "Capstone's custom AI solution reduced our application screening time by 70% 
                     while improving candidate quality. It's been transformational."
                   </blockquote>
-                  <cite className="text-sm text-gray-500">— Marcus Johnson, HR Director</cite>
+                  <cite className="text-sm text-gray-500">Marcus Johnson, HR Director</cite>
                 </div>
               </div>
             </Card>
@@ -674,7 +694,7 @@ function App() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="section-padding">
+      <section id="contact" data-testid="contact-section" data-component="contact" data-section="contact" className="section-padding">
         <div className="container-custom">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
@@ -733,7 +753,7 @@ function App() {
               </div>
             </div>
 
-            <Card className="p-8">
+            <Card data-testid="contact-form-card" data-component="contact-form" className="p-8">
               <CardHeader className="px-0 pt-0">
                 <CardTitle>Start the Conversation</CardTitle>
                 <CardDescription>
@@ -741,7 +761,7 @@ function App() {
                 </CardDescription>
               </CardHeader>
               <CardContent className="px-0 pb-0">
-                <form className="space-y-6">
+                <form data-testid="contact-form" data-component="form" className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -749,6 +769,9 @@ function App() {
                       </label>
                       <input
                         type="text"
+                        data-testid="first-name-input"
+                        data-component="form-input"
+                        data-field="firstName"
                         className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-capstone-blue focus:border-transparent"
                         placeholder="Your first name"
                       />
@@ -759,6 +782,9 @@ function App() {
                       </label>
                       <input
                         type="text"
+                        data-testid="last-name-input"
+                        data-component="form-input"
+                        data-field="lastName"
                         className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-capstone-blue focus:border-transparent"
                         placeholder="Your last name"
                       />
@@ -771,6 +797,9 @@ function App() {
                     </label>
                     <input
                       type="email"
+                      data-testid="email-input"
+                      data-component="form-input"
+                      data-field="email"
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-capstone-blue focus:border-transparent"
                       placeholder="your.email@example.com"
                     />
@@ -782,6 +811,9 @@ function App() {
                     </label>
                     <input
                       type="text"
+                      data-testid="organization-input"
+                      data-component="form-input"
+                      data-field="organization"
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-capstone-blue focus:border-transparent"
                       placeholder="Your organization name"
                     />
@@ -793,12 +825,20 @@ function App() {
                     </label>
                     <textarea
                       rows={4}
+                      data-testid="message-textarea"
+                      data-component="form-textarea"
+                      data-field="message"
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-capstone-blue focus:border-transparent"
                       placeholder="Tell us about your needs and goals..."
                     ></textarea>
                   </div>
                   
-                  <Button className="btn-primary w-full">
+                  <Button 
+                    data-testid="submit-button"
+                    data-component="form-submit"
+                    data-action="submit-contact-form"
+                    className="btn-primary w-full"
+                  >
                     Send Message
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
@@ -810,7 +850,7 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer data-testid="footer" data-component="footer" className="bg-gray-900 text-white py-12">
         <div className="container-custom">
           <div className="grid md:grid-cols-3 gap-8">
             <div className="space-y-4">
