@@ -171,14 +171,13 @@ function App() {
             <div className="space-y-8">
               <div className="space-y-6">
                 <Badge className="bg-capstone-gold text-black font-semibold px-3 py-1 text-sm">
-                  Community & Career Centric AI
+                  Community-Centric AI
                 </Badge>
                 <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold leading-tight">
                   Community-Centric AI That Empowers Everyone
                 </h1>
                 <p className="text-lg md:text-xl text-blue-100 leading-relaxed max-w-lg">
-                  Built by someone who understands second chances. AI that strengthens communities 
-                  while advancing individual careers.
+                  Built by someone who understands second chances. AI that empowers and strengthens communities.
                 </p>
               </div>
               
@@ -268,8 +267,7 @@ function App() {
               What Makes Us Different
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We don't just build AI, we build AI that serves humanity's highest aspirations, 
-              where technology strengthens communities while advancing individual careers.
+              We don't just build AI—we build AI for community empowerment, where technology strengthens and uplifts communities.
             </p>
           </div>
 
@@ -314,7 +312,7 @@ function App() {
               <CardContent>
                 <p className="text-gray-600">
                   Technology that builds collective capacity rather than creating dependency. 
-                  As individuals advance their careers, communities grow stronger.
+                  When communities are empowered, everyone grows stronger.
                 </p>
               </CardContent>
             </Card>
@@ -343,7 +341,7 @@ function App() {
                 
                 <p>
                   "When you've been at the bottom," Shawn reflects, "you understand that technology 
-                  should strengthen communities while advancing individual careers. That's not just 
+                  should strengthen and empower communities. That's not just 
                   good business—it's the right thing to do."
                 </p>
                 
@@ -370,7 +368,7 @@ function App() {
             <div className="space-y-6">
               <Card className="p-6 border-l-4 border-capstone-blue">
                 <blockquote className="text-lg italic text-gray-700">
-                  "What if we built AI that strengthens communities while advancing individual careers? 
+                  "What if we built AI that strengthens and empowers communities? 
                   Technology that's both economically viable and socially transformative."
                 </blockquote>
                 <cite className="text-sm text-gray-500 mt-4 block">Shawn Gregoire, Founder & CEO</cite>
@@ -406,7 +404,7 @@ function App() {
               Our Solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Four core offerings that demonstrate Community & Career Centric AI in action
+              Four core offerings that demonstrate Community-Centric AI in action
             </p>
           </div>
 
@@ -574,7 +572,7 @@ function App() {
               Our Approach
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Community & Career Centric AI isn't just a tagline, it's a methodology that guides every decision
+              Community-Centric AI isn't just a tagline—it's a methodology that guides every decision
             </p>
           </div>
 
@@ -607,7 +605,7 @@ function App() {
               </div>
               <h3 className="text-xl font-semibold">Measurable Impact</h3>
               <p className="text-gray-600">
-                From individual career advancement to organizational efficiency, 
+                From community empowerment to organizational efficiency, 
                 we create value that can be tracked and verified.
               </p>
             </div>
@@ -699,7 +697,7 @@ function App() {
               Ready to Transform Your Community?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Let's discuss how Community & Career Centric AI can serve your organization and community
+              Let's discuss how Community-Centric AI can serve your organization and community
             </p>
           </div>
 
@@ -709,7 +707,7 @@ function App() {
                 <h3 className="text-2xl font-semibold text-gray-900">Get in Touch</h3>
                 <p className="text-gray-600 leading-relaxed">
                   Whether you're an organization looking to implement AI solutions, a community 
-                  seeking workshops, or an individual ready to advance your career, we're here to help.
+                  seeking workshops, or an individual ready to expand your community impact, we're here to help.
                 </p>
               </div>
 
@@ -859,8 +857,7 @@ function App() {
                 <span className="text-xl font-bold">Capstone Tech</span>
               </div>
               <p className="text-gray-400">
-                Pioneering Community & Career Centric AI that strengthens communities 
-                while advancing individual careers.
+                Pioneering Community-Centric AI that empowers and strengthens communities.
               </p>
             </div>
             
@@ -894,4 +891,3 @@ function App() {
 }
 
 export default App
-
